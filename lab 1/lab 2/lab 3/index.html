@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Задание 3 — Адаптивная страница</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="header">
+  <div class="container header-container">
+
+    <div class="logo">Лого</div>
+
+    <h1 class="site-title">Задание 3</h1>
+
+  </div>
+</header>
+
+
+<nav id="nav">
+  <div class="container">
+    <ul>
+      <li><a href="index.html">Открыть главную страницу</a></li>
+      <li><a href="https://kubsu.ru/">Открыть сайт КубГУ</a></li>
+      <li><a href="#data">Перейти к данным</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<main class="container">
+
+  <section class="links-list">
+    <h2>Список гиперссылок</h2>
+
+    <ul>
+      <li><a href="http://kubsu.ru/">КубГУ — HTTP</a></li>
+      <li><a href="https://kubsu.ru/">КубГУ — HTTPS</a></li>
+
+      <li>
+        <a href="https://i.pinimg.com/originals/05/0b/01/050b01a87985a9245844420d04decbbf.png">
+          <img src="image.jpg" alt="Картинка" width="200">
+        </a>
+      </li>
+
+      <li><a href="about.html">Внутренняя страница</a></li>
+      <li><a href="index.html">Главная страница</a></li>
+      <li><a href="#form">Перейти к форме</a></li>
+
+      <li>
+        <a href="parameters.html?name=student&group=123&course=3">
+          Ссылка с тремя параметрами
+        </a>
+      </li>
+
+      <li><a href="id.html">Ссылка с параметром id</a></li>
+      <li><a href="./current.html">Страница текущего каталога</a></li>
+      <li><a href="about/about-page.html">Страница каталога about</a></li>
+      <li><a href="../parent-page.html">Страница уровнем выше</a></li>
+      <li><a href="../../upper-page.html">Страница двумя уровнями выше</a></li>
+
+      <li>
+        <p>
+          Более подробную информацию можно найти
+          <a href="https://kubsu.ru/">на официальном сайте КубГУ</a>.
+        </p>
+      </li>
+
+      <li>
+        <a href="https://ru.ruwiki.ru/wiki/Кук,_Тим#Биография">
+          Фрагмент страницы стороннего сайта
+        </a>
+      </li>
+
+      <li>
+        <p>Карта изображения:</p>
+
+        <img src="universitet.jpg"
+             alt="Карта изображения"
+             width="500"
+             height="300"
+             usemap="#image-map">
+
+        <map name="image-map">
+          <area shape="rect"
+                coords="0,0,250,300"
+                href="https://kubsu.ru/"
+                alt="КубГУ">
+
+          <area shape="circle"
+                coords="375,150,75"
+                href="https://ya.ru/"
+                alt="Яндекс">
+        </map>
+      </li>
+
+      <li><a href="">Ссылка с пустым href</a></li>
+      <li><a>Ссылка без href</a></li>
+
+      <li>
+        <a href="https://kubsu.ru/" rel="nofollow">
+          Ссылка с запретом перехода поисковика
+        </a>
+      </li>
+
+      <li>
+        <a href="private.html">
+          Ресурс, запрещённый для индексации
+        </a>
+      </li>
+    </ul>
+  </section>
+
+
+  <section class="navigation-section">
+    <h2>Навигация</h2>
+
+    <ol>
+      <li>
+        <a href="index.html" title="Главная страница сайта">
+          Главная
+        </a>
+      </li>
+
+      <li>
+        <a href="site.html" title="Информация о сайте">
+          О сайте
+        </a>
+      </li>
+
+      <li>
+        <a href="contacts.html" title="Контактная информация">
+          Контакты
+        </a>
+      </li>
+    </ol>
+  </section>
+
+
+  <section class="ftp-section">
+    <h2>FTP</h2>
+
+    <a href="ftp://username:password@example.com/file.txt">
+      Файл на FTP-сервере с авторизацией
+    </a>
+  </section>
+
+
+  <section id="data" class="table-section">
+    <h2>Таблица</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Колонка 1</th>
+          <th>Колонка 2</th>
+          <th>Колонка 3</th>
+          <th>Колонка 4</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Данные 1</td>
+          <td>Данные 2</td>
+          <td colspan="2">Объединённая ячейка</td>
+        </tr>
+
+        <tr>
+          <td>Данные 3</td>
+          <td>Данные 4</td>
+          <td>Данные 5</td>
+          <td>Данные 6</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">Объединённая ячейка</td>
+          <td>Данные 7</td>
+          <td>Данные 8</td>
+        </tr>
+
+        <tr>
+          <td>Данные 9</td>
+          <td>Данные 10</td>
+          <td>Данные 11</td>
+          <td>Данные 12</td>
+        </tr>
+
+        <tr>
+          <td>Данные 13</td>
+          <td colspan="3">Объединённая ячейка</td>
+        </tr>
+
+        <tr>
+          <td>Данные 14</td>
+          <td>Данные 15</td>
+          <td>Данные 16</td>
+          <td>Данные 17</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <section id="form" class="form-section">
+    <h2>Форма</h2>
+
+    <form action="/form.php" method="POST">
+
+      <label>
+        ФИО:<br>
+        <input type="text" name="fio">
+      </label>
+
+      <br><br>
+
+      <label>
+        Телефон:<br>
+        <input type="tel" name="phone">
+      </label>
+
+      <br><br>
+
+      <label>
+        E-mail:<br>
+        <input type="email" name="email">
+      </label>
+
+      <br><br>
+
+      <label>
+        Дата рождения:<br>
+        <input type="date" name="birthdate">
+      </label>
+
+      <br><br>
+
+      Пол:<br>
+
+      <label>
+        <input type="radio" name="gender" value="male">
+        Мужской
+      </label>
+
+      <label>
+        <input type="radio" name="gender" value="female">
+        Женский
+      </label>
+
+      <br><br>
+
+      <label>
+        Любимый язык программирования:<br>
+
+        <select name="programming_languages[]" multiple="multiple">
+          <option value="Pascal">Pascal</option>
+          <option value="C">C</option>
+          <option value="C++">C++</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="PHP">PHP</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="Haskel">Haskel</option>
+          <option value="Clojure">Clojure</option>
+          <option value="Prolog">Prolog</option>
+          <option value="Scala">Scala</option>
+        </select>
+      </label>
+
+      <br><br>
+
+      <label>
+        Биография:<br>
+        <textarea name="biography" rows="7" cols="50"></textarea>
+      </label>
+
+      <br><br>
+
+      <label>
+        <input type="checkbox" name="contract" value="yes">
+        С контрактом ознакомлен(а)
+      </label>
+
+      <br><br>
+
+      <input type="submit" value="Сохранить">
+
+    </form>
+  </section>
+
+</main>
+
+
+<footer id="footer">
+  <div class="container">
+    <p>(с) Артур Багян</p>
+  </div>
+</footer>
+
+</body>
+</html>

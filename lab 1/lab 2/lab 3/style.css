@@ -1,0 +1,245 @@
+/* ==================== MOBILE FIRST ==================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+/* ==================== HEADER ==================== */
+
+#header {
+  width: 100%;
+  background-color: #0AFFFF;
+  border-bottom: 1px solid #4676a8;
+}
+
+.header-container {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #4676a8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  flex-shrink: 0;
+}
+
+.site-title {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+
+/* ==================== NAV ==================== */
+
+#nav {
+  width: 100%;
+  background-color: #0AFFFF;
+  border-bottom: 1px solid #4676a8;
+}
+
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#nav li {
+  margin: 0;
+  border-bottom: 1px solid #4676a8;
+}
+
+#nav a {
+  display: block;
+  padding: 10px 0;
+  color: #000000;
+  text-decoration: none;
+  font-family: Georgia, serif;
+}
+
+#nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==================== MAIN ==================== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+
+/* На телефоне таблица находится выше списка ссылок */
+
+.table-section {
+  order: 1;
+}
+
+.links-list {
+  order: 2;
+}
+
+.navigation-section {
+  order: 3;
+}
+
+.ftp-section {
+  order: 4;
+}
+
+.form-section {
+  order: 5;
+}
+
+
+/* ==================== ОТСТУПЫ ==================== */
+
+.links-list,
+.navigation-section,
+.ftp-section,
+.table-section,
+.form-section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+
+/* ==================== ТАБЛИЦА ==================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th,
+table td {
+  border: 1px solid #000000;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #0AFFFF;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #dce8f5;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
+/* ==================== ФОРМА ==================== */
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+#footer {
+  width: 100%;
+  background-color: #0AFFFF;
+  border-top: 1px solid #4676a8;
+}
+
+#footer p {
+  margin: 0;
+  padding: 25px 0;
+  font-family: Georgia, serif;
+}
+
+
+/* ==================== DESKTOP ==================== */
+
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 960px;
+  }
+
+  /* На компьютере меню горизонтальное */
+
+  #nav ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #nav li {
+    border-bottom: none;
+  }
+
+  #nav a {
+    padding: 10px 0;
+  }
+
+
+  /* На компьютере возвращаем порядок из задания 2 */
+
+  .links-list {
+    order: 1;
+  }
+
+  .table-section {
+    order: 2;
+  }
+
+  .navigation-section {
+    order: 3;
+  }
+
+  .ftp-section {
+    order: 4;
+  }
+
+  .form-section {
+    order: 5;
+  }
+
+
+  /* Header */
+
+  .header-container {
+    min-height: 110px;
+  }
+
+}
