@@ -1,4 +1,4 @@
-/* ==================== MOBILE FIRST ==================== */
+/*  MOBILE FIRST  */
 
 * {
   box-sizing: border-box;
@@ -19,12 +19,17 @@ body {
 }
 
 
-/* ==================== HEADER ==================== */
+/* HEADER  */
 
 #header {
   width: 100%;
   background-color: #0AFFFF;
   border-bottom: 1px solid #4676a8;
+}
+
+/* Шапка всегда растянута на всю ширину */
+#header .container {
+  max-width: none;
 }
 
 .header-container {
@@ -54,12 +59,17 @@ body {
 }
 
 
-/* ==================== NAV ==================== */
+/*  NAV */
 
 #nav {
   width: 100%;
   background-color: #0AFFFF;
   border-bottom: 1px solid #4676a8;
+}
+
+/* Навигация всегда растянута на всю ширину */
+#nav .container {
+  max-width: none;
 }
 
 #nav ul {
@@ -88,7 +98,7 @@ body {
 }
 
 
-/* ==================== MAIN ==================== */
+/*  MAIN */
 
 main {
   display: flex;
@@ -120,7 +130,7 @@ main {
 }
 
 
-/* ==================== ОТСТУПЫ ==================== */
+/*  ОТСТУПЫ  */
 
 .links-list,
 .navigation-section,
@@ -136,7 +146,7 @@ h2 {
 }
 
 
-/* ==================== ТАБЛИЦА ==================== */
+/* ТАБЛИЦА  */
 
 table {
   width: 100%;
@@ -164,7 +174,7 @@ table tbody tr:nth-child(even) {
 }
 
 
-/* ==================== ФОРМА ==================== */
+/* ФОРМА  */
 
 input,
 select,
@@ -174,12 +184,17 @@ textarea {
 }
 
 
-/* ==================== FOOTER ==================== */
+/* FOOTER  */
 
 #footer {
   width: 100%;
   background-color: #0AFFFF;
   border-top: 1px solid #4676a8;
+}
+
+/* Футер тоже растянут на всю ширину */
+#footer .container {
+  max-width: none;
 }
 
 #footer p {
@@ -193,9 +208,12 @@ textarea {
 
 @media (min-width: 768px) {
 
-  .container {
+  /* Основной контент на компьютере ограничен 960px */
+
+  main.container {
     max-width: 960px;
   }
+
 
   /* На компьютере меню горизонтальное */
 
