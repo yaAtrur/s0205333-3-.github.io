@@ -10,34 +10,33 @@ body {
   color: #000000;
 }
 
+/* Контейнер для всей страницы — оставляем как есть, он ограничивает контент */
 .container {
   width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-
-/*  HEADER  */
-
+/* Шапка на всю ширину экрана (без центрирования) */
 #header {
   width: 100%;
   background-color: #0AFFFF;
   border-bottom: 1px solid #4676a8;
+  /* Убираем margin у обертки, чтобы не было центрирования */
 }
 
-/* Шапка на всю ширину */
+/* Контейнер внутри шапки — тоже на 100%, но без margin: auto */
 #header .header-container {
   width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0 15px;
-}
-
-.header-container {
-  min-height: 90px;
+  max-width: none;       /* Отменяем любое ограничение ширины */
+  margin: 0;             /* Убираем отступы */
+  padding: 0 15px;       /* Внутренние отступы по бокам */
+  
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Ключевое: прижимает лого и заголовок к краям */
+  min-height: 90px;
 }
 
 .logo {
@@ -49,7 +48,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: Georgia, serif;
-  flex-shrink: 0;
+  flex-shrink: 0;        /* Чтобы лого не сжималось */
 }
 
 .site-title {
@@ -60,15 +59,13 @@ body {
 }
 
 
-/* NAV  */
-
+/* NAV */
 #nav {
   width: 100%;
   background-color: #0AFFFF;
   border-bottom: 1px solid #4676a8;
 }
 
-/* Навигация на всю ширину */
 #nav > .container {
   width: 100%;
   max-width: none;
@@ -81,7 +78,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* По умолчанию (мобильные) — вертикальный список */
 }
 
 #nav li {
@@ -101,18 +98,14 @@ body {
   text-decoration: underline;
 }
 
-
-/*  MAIN  */
-
+/* MAIN */
 main {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
 }
 
-
-/* На телефоне таблица находится выше списка ссылок */
-
+/* Mobile: таблица выше списка ссылок */
 .table-section {
   order: 1;
 }
@@ -133,9 +126,7 @@ main {
   order: 5;
 }
 
-
-/*  ОТСТУПЫ  */
-
+/* Отступы между секциями */
 .links-list,
 .navigation-section,
 .ftp-section,
@@ -149,9 +140,7 @@ h2 {
   font-weight: normal;
 }
 
-
-/* ТАБЛИЦА  */
-
+/* ТАБЛИЦА */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -177,9 +166,7 @@ table tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
 
-
-/*  ФОРМА  */
-
+/* ФОРМА */
 input,
 select,
 textarea {
@@ -187,9 +174,7 @@ textarea {
   font-family: Arial, sans-serif;
 }
 
-
-/*  FOOTER  */
-
+/* FOOTER */
 #footer {
   width: 100%;
   background-color: #0AFFFF;
@@ -209,23 +194,17 @@ textarea {
   font-family: Georgia, serif;
 }
 
+/* MEDIA QUERIES (Mobile First) */
 
-/* TABLET / DESKTOP  */
-
+/* Планшеты и десктопы */
 @media (min-width: 768px) {
 
-  /*
-    Основной контент на компьютере остаётся
-    ограниченным 960px, как в задании 2
-  */
-
-  main.container {
+  /* Контейнер на десктопе — 960px */
+  .container {
     max-width: 960px;
   }
 
-
-  /*  NAV DESKTOP  */
-
+  /* Навигация: горизонтальный ряд */
   #nav ul {
     flex-direction: row;
     gap: 20px;
@@ -239,11 +218,7 @@ textarea {
     padding: 10px 0;
   }
 
-
-  /* ORDER DESKTOP */
-
-  /* Возвращаем обычный порядок */
-
+  /* Возвращаем обычный порядок секций на десктопе */
   .links-list {
     order: 1;
   }
@@ -264,11 +239,8 @@ textarea {
     order: 5;
   }
 
-
-  /*  HEADER DESKTOP */
-
+  /* Увеличиваем высоту шапки на десктопе */
   .header-container {
     min-height: 110px;
   }
-
 }
