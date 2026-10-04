@@ -1,5 +1,3 @@
-/*  MOBILE FIRST  */
-
 * {
   box-sizing: border-box;
 }
@@ -19,7 +17,7 @@ body {
 }
 
 
-/* HEADER  */
+/*  HEADER  */
 
 #header {
   width: 100%;
@@ -27,9 +25,12 @@ body {
   border-bottom: 1px solid #4676a8;
 }
 
-/* Шапка всегда растянута на всю ширину */
-#header .container {
+/* Шапка на всю ширину */
+#header .header-container {
+  width: 100%;
   max-width: none;
+  margin: 0;
+  padding: 0 15px;
 }
 
 .header-container {
@@ -59,7 +60,7 @@ body {
 }
 
 
-/*  NAV */
+/* NAV  */
 
 #nav {
   width: 100%;
@@ -67,9 +68,12 @@ body {
   border-bottom: 1px solid #4676a8;
 }
 
-/* Навигация всегда растянута на всю ширину */
-#nav .container {
+/* Навигация на всю ширину */
+#nav > .container {
+  width: 100%;
   max-width: none;
+  margin: 0;
+  padding: 0 15px;
 }
 
 #nav ul {
@@ -98,7 +102,7 @@ body {
 }
 
 
-/*  MAIN */
+/*  MAIN  */
 
 main {
   display: flex;
@@ -174,7 +178,7 @@ table tbody tr:nth-child(even) {
 }
 
 
-/* ФОРМА  */
+/*  ФОРМА  */
 
 input,
 select,
@@ -184,7 +188,7 @@ textarea {
 }
 
 
-/* FOOTER  */
+/*  FOOTER  */
 
 #footer {
   width: 100%;
@@ -192,9 +196,11 @@ textarea {
   border-top: 1px solid #4676a8;
 }
 
-/* Футер тоже растянут на всю ширину */
 #footer .container {
+  width: 100%;
   max-width: none;
+  margin: 0;
+  padding: 0 15px;
 }
 
 #footer p {
@@ -204,18 +210,21 @@ textarea {
 }
 
 
-/* ==================== DESKTOP ==================== */
+/* TABLET / DESKTOP  */
 
 @media (min-width: 768px) {
 
-  /* Основной контент на компьютере ограничен 960px */
+  /*
+    Основной контент на компьютере остаётся
+    ограниченным 960px, как в задании 2
+  */
 
   main.container {
     max-width: 960px;
   }
 
 
-  /* На компьютере меню горизонтальное */
+  /*  NAV DESKTOP  */
 
   #nav ul {
     flex-direction: row;
@@ -231,7 +240,9 @@ textarea {
   }
 
 
-  /* На компьютере возвращаем порядок из задания 2 */
+  /* ORDER DESKTOP */
+
+  /* Возвращаем обычный порядок */
 
   .links-list {
     order: 1;
@@ -254,7 +265,7 @@ textarea {
   }
 
 
-  /* Header */
+  /*  HEADER DESKTOP */
 
   .header-container {
     min-height: 110px;
