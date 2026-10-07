@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  /* Настроил расчет размеров элементов с учетом padding и border */
 }
 
 body {
@@ -8,34 +9,36 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #000000;
+  /* Убрал стандартные отступы и задал основной шрифт и цвета */
 }
 
-/* Контейнер для всей страницы — оставляем как есть, он ограничивает контент */
+/* Контейнер для всей страницы — ограничил ширину контента */
 .container {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 15px;
+  /* Сделал контейнер шириной до 960px и отцентрировал его */
 }
 
-/* Шапка на всю ширину экрана (без центрирования) */
+/* Шапка во всю ширину экрана */
 #header {
   width: 100%;
   background-color: #0AFFFF;
   border-bottom: 1px solid #4676a8;
-  /* Убираем margin у обертки, чтобы не было центрирования */
+  /* Добавил нижнюю границу шапки */
 }
 
-/* Контейнер внутри шапки — тоже на 100%, но без margin: auto */
+/* Контейнер шапки тоже сделал на всю ширину */
 #header .header-container {
   width: 100%;
-  max-width: none;       /* Отменяем любое ограничение ширины */
-  margin: 0;             /* Убираем отступы */
-  padding: 0 15px;       /* Внутренние отступы по бокам */
+  max-width: none;       /* Убрал ограничение ширины */
+  margin: 0;             /* Убрал автоматическое центрирование */
+  padding: 0 15px;      /* Добавил отступы по краям */
   
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ключевое: прижимает лого и заголовок к краям */
+  justify-content: space-between; /* Разместил лого и заголовок по краям */
   min-height: 90px;
 }
 
@@ -48,7 +51,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: Georgia, serif;
-  flex-shrink: 0;        /* Чтобы лого не сжималось */
+  flex-shrink: 0;        /* Запретил сжатие логотипа */
 }
 
 .site-title {
@@ -56,16 +59,20 @@ body {
   font-family: Georgia, serif;
   font-size: 20px;
   font-weight: normal;
+  /* Настроил внешний вид заголовка */
 }
 
 
 /* NAV */
+
+/* Навигацию растянул на всю ширину */
 #nav {
   width: 100%;
   background-color: #0AFFFF;
   border-bottom: 1px solid #4676a8;
 }
 
+/* Контейнер навигации сделал на всю ширину */
 #nav > .container {
   width: 100%;
   max-width: none;
@@ -78,7 +85,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* По умолчанию (мобильные) — вертикальный список */
+  flex-direction: column; /* На телефоне ссылки идут вертикально */
 }
 
 #nav li {
@@ -92,20 +99,25 @@ body {
   color: #000000;
   text-decoration: none;
   font-family: Georgia, serif;
+  /* Настроил внешний вид ссылок */
 }
 
 #nav a:hover {
   text-decoration: underline;
+  /* При наведении добавил подчеркивание */
 }
 
+
 /* MAIN */
+
+/* Сделал основную часть Flex-контейнером */
 main {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
 }
 
-/* Mobile: таблица выше списка ссылок */
+/* На мобильном расположил таблицу перед списком ссылок */
 .table-section {
   order: 1;
 }
@@ -126,7 +138,7 @@ main {
   order: 5;
 }
 
-/* Отступы между секциями */
+/* Добавил отступы между секциями */
 .links-list,
 .navigation-section,
 .ftp-section,
@@ -138,13 +150,17 @@ main {
 h2 {
   font-family: Georgia, serif;
   font-weight: normal;
+  /* Настроил шрифт заголовков */
 }
 
+
 /* ТАБЛИЦА */
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
+  /* Растянул таблицу на всю ширину */
 }
 
 table th,
@@ -152,29 +168,39 @@ table td {
   border: 1px solid #000000;
   padding: 10px;
   text-align: left;
+  /* Добавил границы и внутренние отступы ячеек */
 }
 
 table th {
   background-color: #0AFFFF;
+  /* Выделил заголовки таблицы */
 }
 
 table tbody tr:nth-child(odd) {
   background-color: #dce8f5;
+  /* Сделал нечетные строки другого цвета */
 }
 
 table tbody tr:nth-child(even) {
   background-color: #ffffff;
+  /* Задал цвет четных строк */
 }
 
+
 /* ФОРМА */
+
 input,
 select,
 textarea {
   max-width: 100%;
   font-family: Arial, sans-serif;
+  /* Ограничил ширину элементов формы */
 }
 
+
 /* FOOTER */
+
+/* Футер растянул на всю ширину */
 #footer {
   width: 100%;
   background-color: #0AFFFF;
@@ -192,19 +218,21 @@ textarea {
   margin: 0;
   padding: 25px 0;
   font-family: Georgia, serif;
+  /* Настроил отступы и шрифт текста футера */
 }
+
 
 /* MEDIA QUERIES (Mobile First) */
 
-/* Планшеты и десктопы */
+/* Настройки для планшетов и компьютеров */
 @media (min-width: 768px) {
 
-  /* Контейнер на десктопе — 960px */
+  /* Контейнер на компьютере ограничил до 960px */
   .container {
     max-width: 960px;
   }
 
-  /* Навигация: горизонтальный ряд */
+  /* На компьютере сделал навигацию горизонтальной */
   #nav ul {
     flex-direction: row;
     gap: 20px;
@@ -218,7 +246,7 @@ textarea {
     padding: 10px 0;
   }
 
-  /* Возвращаем обычный порядок секций на десктопе */
+  /* На компьютере вернул обычный порядок секций */
   .links-list {
     order: 1;
   }
@@ -239,7 +267,7 @@ textarea {
     order: 5;
   }
 
-  /* Увеличиваем высоту шапки на десктопе */
+  /* Увеличил высоту шапки на компьютере */
   .header-container {
     min-height: 110px;
   }
