@@ -3,38 +3,51 @@
 
 <head>
   <meta charset="UTF-8">
+
+  <!-- Настройка отображения на мобильных устройствах 
+  Ширина страницы равна ширине экрана.  Начальный масштаб страницы при загрузке -1 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Задание 3 — Адаптивная страница</title>
   <meta name="robots" content="noindex">
+
+  <!-- Подключение CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- Шапка сайта -->
 <header id="header">
   <div class="container header-container">
 
+    <!-- Логотип -->
     <div class="logo">Лого</div>
 
+    <!-- Заголовок страницы -->
     <h1 class="site-title">Задание 3</h1>
 
   </div>
 </header>
 
 
+<!-- Основное навигационное меню -->
 <nav id="nav">
   <div class="container">
+
     <ul>
       <li><a href="index.html">Открыть главную страницу</a></li>
       <li><a href="https://kubsu.ru/">Открыть сайт КубГУ</a></li>
       <li><a href="#data">Перейти к данным</a></li>
     </ul>
+
   </div>
 </nav>
 
 
+<!-- Основное содержимое страницы -->
 <main class="container">
 
+  <!-- Список гиперссылок -->
   <section class="links-list">
     <h2>Список гиперссылок</h2>
 
@@ -86,12 +99,16 @@
              height="300"
              usemap="#image-map">
 
+        <!-- Карта изображения -->
         <map name="image-map">
+
+          <!-- Прямоугольная активная область -->
           <area shape="rect"
                 coords="0,0,250,300"
                 href="https://kubsu.ru/"
                 alt="КубГУ">
 
+          <!-- Круглая активная область -->
           <area shape="circle"
                 coords="375,150,75"
                 href="https://ya.ru/"
@@ -116,10 +133,10 @@
     </ul>
   </section>
 
-
   <section class="navigation-section">
     <h2>Навигация</h2>
 
+    <!-- Нумерованный список -->
     <ol>
       <li>
         <a href="index.html" title="Главная страница сайта">
@@ -142,6 +159,7 @@
   </section>
 
 
+  <!-- Раздел с FTP-ссылкой -->
   <section class="ftp-section">
     <h2>FTP</h2>
 
@@ -151,10 +169,13 @@
   </section>
 
 
+  <!-- Раздел с таблицей -->
   <section id="data" class="table-section">
     <h2>Таблица</h2>
 
     <table>
+
+      <!-- Заголовок таблицы -->
       <thead>
         <tr>
           <th>Колонка 1</th>
@@ -164,10 +185,14 @@
         </tr>
       </thead>
 
+      <!-- Основные данные таблицы -->
       <tbody>
+
         <tr>
           <td>Данные 1</td>
           <td>Данные 2</td>
+
+          <!-- Объединение двух столбцов -->
           <td colspan="2">Объединённая ячейка</td>
         </tr>
 
@@ -179,6 +204,7 @@
         </tr>
 
         <tr>
+          <!-- Объединение двух столбцов -->
           <td colspan="2">Объединённая ячейка</td>
           <td>Данные 7</td>
           <td>Данные 8</td>
@@ -193,6 +219,8 @@
 
         <tr>
           <td>Данные 13</td>
+
+          <!-- Одна ячейка занимает три столбца -->
           <td colspan="3">Объединённая ячейка</td>
         </tr>
 
@@ -202,16 +230,20 @@
           <td>Данные 16</td>
           <td>Данные 17</td>
         </tr>
+
       </tbody>
     </table>
   </section>
 
 
+  <!-- Раздел с формой -->
   <section id="form" class="form-section">
     <h2>Форма</h2>
 
+    <!-- Отправка данных формы методом POST (с помощью HTTP запроса) -->
     <form action="/form.php" method="POST">
 
+      <!-- Поле для ФИО -->
       <label>
         ФИО:<br>
         <input type="text" name="fio">
@@ -219,6 +251,7 @@
 
       <br><br>
 
+      <!-- Поле для телефона -->
       <label>
         Телефон:<br>
         <input type="tel" name="phone">
@@ -226,6 +259,7 @@
 
       <br><br>
 
+      <!-- Поле для электронной почты -->
       <label>
         E-mail:<br>
         <input type="email" name="email">
@@ -233,6 +267,7 @@
 
       <br><br>
 
+      <!-- Поле для даты рождения -->
       <label>
         Дата рождения:<br>
         <input type="date" name="birthdate">
@@ -240,6 +275,7 @@
 
       <br><br>
 
+      <!-- Выбор одного варианта пола -->
       Пол:<br>
 
       <label>
@@ -254,6 +290,7 @@
 
       <br><br>
 
+      <!-- Выбор нескольких языков программирования -->
       <label>
         Любимый язык программирования:<br>
 
@@ -274,6 +311,7 @@
 
       <br><br>
 
+      <!-- Многострочное поле для биографии -->
       <label>
         Биография:<br>
         <textarea name="biography" rows="7" cols="50"></textarea>
@@ -288,6 +326,7 @@
 
       <br><br>
 
+      <!-- Кнопка отправки формы -->
       <input type="submit" value="Сохранить">
 
     </form>
@@ -296,6 +335,7 @@
 </main>
 
 
+<!-- Нижняя часть страницы -->
 <footer id="footer">
   <div class="container">
     <p>(с) Артур Багян</p>
