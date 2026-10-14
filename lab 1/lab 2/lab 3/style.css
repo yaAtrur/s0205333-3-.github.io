@@ -1,5 +1,5 @@
 
-* {
+* { /* звездочка - универсальный селектор, который выбирает все HTML элементы */
   box-sizing: border-box;
   /* Учитываем отступы и границы в размерах элементов */
 }
@@ -17,7 +17,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #000000;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word; /* Разрешает переносить слова, если они не помещаются в одну строку */
   /* Убрал стандартные отступы и настроил основной шрифт */
 }
 
@@ -48,7 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 10px; /* Расстояние между соседними элементами */
 
   width: 100%;
   max-width: none;
@@ -81,14 +81,14 @@ body {
   font-size: 20px;
   font-weight: normal;
   text-align: right;
-  overflow-wrap: anywhere;
+  overflow-wrap: anywhere; /* тоже перенос, отличие от предедущего, что он учитывает минимальную ширину содержимого элемента */
   /* Настроил заголовок в шапке */
 }
 
 /* Основное меню */
 
 #nav {
-  display: block;
+  display: block; /* Отдельный блок для навигации */
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -97,7 +97,7 @@ body {
   /* Задал цвет и ширину навигации */
 }
 
-#nav > .container {
+#nav > .container { /* Выбирает элемент с классом контейнер */
   width: 100%;
   max-width: none;
   min-width: 0;
@@ -106,15 +106,15 @@ body {
 }
 
 #nav ul {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* превращает список во Flex-контейнер. */
+  flex-direction: column; /* располагает пункты друг под другом, а не в одну строку. */
   gap: 0;
 
   width: 100%;
   min-width: 0;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: none; /* убирает маркеры списка */
   /* На телефоне ссылки располагаются вертикально */
 }
 
@@ -135,7 +135,7 @@ body {
   /* Настроил внешний вид ссылок */
 }
 
-#nav a:hover {
+#nav a:hover { /* Выбирает ссылку, на которую наведен курсор */
   text-decoration: underline;
   /* Добавил подчеркивание при наведении */
 }
@@ -145,7 +145,7 @@ body {
 main.container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: stretch; /* растягивает элементы, чтобы они занимали всю доступную ширину. */
 
   width: 100%;
   min-width: 0;
@@ -177,7 +177,7 @@ main.container {
 }
 
 /* Настроил отступы между разделами */
-
+/* Через точку выбираю элементы с указанными классами */
 .links-list,
 .navigation-section,
 .ftp-section,
@@ -210,8 +210,8 @@ table {
   /* Растянул таблицу по ширине контейнера */
 }
 
-table th,
-table td {
+table th, /* Загаловочные ячейки */
+table td { /* Обычные ячейки */
   min-width: 0;
   padding: 10px;
   border: 1px solid #000000;
@@ -289,7 +289,7 @@ textarea {
 
 /* Настройки для планшетов и компьютеров */
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { /* применяет CSS-правила, только если ширина окна браузера составляет 768 пикселей или больше. */
 
   .container {
     max-width: 960px;
@@ -297,8 +297,8 @@ textarea {
   }
 
   #nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row; /* Ссылки - в горизонтальный ряд */
+    flex-wrap: wrap; /* Перенос, если не хватает места */
     gap: 20px;
     /* Перестроил меню в горизонтальный ряд */
   }
