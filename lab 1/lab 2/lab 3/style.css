@@ -377,30 +377,34 @@ textarea {
   }
 
   #header .header-container {
-    min-height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    min-height: 50px;
+    padding: 5px 10px;
     /* Немного увеличил высоту шапки */
   }
 
-  .site-title {
-    left: 55px;
-    bottom: 5px;
-    margin: 0;
-    line-height: 20px;
-  }
-
   .logo {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    width: 70px;
-    height: 60px;
+    position: static;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    /* Сделал логотип круглым и выровнял текст по центру */
   }
 
   .site-title {
-    position: absolute;
-    left: 110px;
-    bottom: 5px;
+    position: static;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1;
     text-align: left;
+    overflow-wrap: anywhere;
+    /* Настроил заголовок в шапке */
   }
 
   #nav {
@@ -422,7 +426,7 @@ textarea {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    gap: 0;
+    gap: 15px;
     width: auto;
   }
 
