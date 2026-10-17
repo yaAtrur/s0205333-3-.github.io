@@ -377,10 +377,15 @@ textarea {
   }
 
   #header .header-container {
-    position: relative;
-    display: block;
     min-height: 90px;
-    padding: 5px 10px;
+    /* Немного увеличил высоту шапки */
+  }
+
+  .site-title {
+    left: 55px;
+    bottom: 5px;
+    margin: 0;
+    line-height: 20px;
   }
 
   .logo {
